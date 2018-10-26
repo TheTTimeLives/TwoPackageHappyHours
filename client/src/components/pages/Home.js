@@ -6,7 +6,7 @@ import DemoTabs from "../Tabs/DemoTabs";
 
 import Appbar from "../Appbar/Appbar";
 import Stepperfd from "../FoodDrinkStepper/fdStepper";
-import Restaurants from "./RestaurantList.json";
+//import Restaurants from "./RestaurantList.json";
 import axios from "axios";
 import Clock from 'react-live-clock';
 import MyDialog from '../Dialog/MyDialog';
@@ -45,7 +45,7 @@ class Home extends Component {
     hasFood: false,
     hasDrink: false,
     stepperValue: 0,
-    Restaurants: Restaurants,
+    Restaurants: null,
     Deals: [],
     currentTab: 'placeholder',
     drawerVisible: false,
@@ -660,10 +660,10 @@ class Home extends Component {
   // TODO consider get e.g
   //get visibleRestaurants () {}
 
-  filterByTypeAndFlags = (restaurants) => {
+  filterByTypeAndFlags = () => {
     // let filteredRestaurants = restaurants.slice()
-    let filteredRestaurants = restaurants;
-    const { hasDrink, hasFood, foodCat, currentTime, currentDay } = this.state
+    const { hasDrink, hasFood, foodCat, currentTime, currentDay, Restaurants } = this.state
+    let filteredRestaurants = Restaurants.slice();
 
     // console.log('This is the filtered Restaurants pre-filtering', filteredRestaurants);
     // console.log('This is my actual data', restaurants);
@@ -675,11 +675,8 @@ class Home extends Component {
 
     // First filter: the matching category
 
-
-
-
     if (foodCat !== 'All') {
-      filteredRestaurants = restaurants.filter(restaurant => {
+      filteredRestaurants = filteredRestaurants.filter(restaurant => {
         return restaurant.categories.find(cat => cat.title === foodCat)
       })
     }
@@ -810,7 +807,7 @@ class Home extends Component {
 
 
   render() {
-    const { vertical, horizontal, drawerVisible, currentTab, Restaurants } = this.state
+    const { Restaurants, vertical, horizontal, drawerVisible, currentTab } = this.state
     const { classes } = this.props;
 
     const variantIcon = {
@@ -828,10 +825,12 @@ class Home extends Component {
     };
 
 
+    if (Restaurants === null) return <div>Loading</div>
+
 
     // console.log(this.state.Restaurants);
-    console.log('Restaraunt latitude below');
-    console.log(Restaurants[0].coordinates.latitude);
+    //console.log('Restaraunt latitude below');
+    //console.log(Restaurants[0].coordinates.latitude);
     // console.log(this.state.Restaurants.restaurantName);
 
     return (
@@ -952,7 +951,7 @@ class Home extends Component {
         />
 
         <SimpleMap
-          Restaurants={this.filterByTypeAndFlags(Restaurants)}
+          Restaurants={this.filterByTypeAndFlags()}
           filterRestaurants={this.filterRestaurants}
         />
 
