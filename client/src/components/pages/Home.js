@@ -715,20 +715,8 @@ class Home extends Component {
       }
 
       restaurant.deals.forEach(deal => {
-        // console.log('THAT TIME SHIT RAN');
 
-        // console.log(`The current proccessing deal has the day ${deal.timeDay} starts at ${deal.timeStart} and ends at ${deal.timeEnd}. The current time is ${currentTime}`);
-        // console.log('deal object', deal);
-
-        // if (deal.timeStart < currentTime && deal.timeEnd > currentTime && currentDay ==  deal.timeDay || 'All') {
-        //   console.log(`CONDITION WAS TRUE`);
-        //   console.log('This deal met the condition', currentDay, deal.timeDay, deal);
-        //   hasDeal = true;
-        // }
-
-        //if I change this to some dumb word like butts, it doesn't pass, but if I say a day it works
-
-        if (currentDay == deal.timeDay) {
+        if (currentDay == deal.timeDay || deal.timeDay == 'Everyday') {
           console.log(`This deal is for the day given`, currentDay, deal.timeDay, deal);
           hasDeal = true;
         }

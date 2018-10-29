@@ -182,7 +182,7 @@ class MyDialog extends React.Component {
                   {/* <MenuItem value="">
                     <em>None</em>
                   </MenuItem> */}
-                  <MenuItem value={'All'}>All</MenuItem>
+                  <MenuItem value={'Everyday'}>Everyday Deal</MenuItem>
                   <MenuItem value={'Monday'}>Monday</MenuItem>
                   <MenuItem value={'Tuesday'}>Tuesday</MenuItem>
                   <MenuItem value={'Wednesday'}>Wednesday</MenuItem>
@@ -217,11 +217,11 @@ class MyDialog extends React.Component {
             </form>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
-              Cancel
-            </Button>
             <Button onClick={this.handleSubmit} color="primary">
               Submit
+            </Button>
+            <Button onClick={this.handleClose} color="primary">
+              Cancel
             </Button>
           </DialogActions>
         </Dialog>

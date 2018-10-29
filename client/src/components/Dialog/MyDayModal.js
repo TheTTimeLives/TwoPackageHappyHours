@@ -97,7 +97,8 @@ class MyDayModal extends React.Component {
                   }}
                   className={classes.selectEmpty}
                 >
-                  <MenuItem value={'All'}>All Week</MenuItem>
+                  <MenuItem value={'All'}>All</MenuItem>
+                  <MenuItem value={'Everyday'}>Everyday Deals</MenuItem>
                   <MenuItem value={'Monday'}>Monday</MenuItem>
                   <MenuItem value={'Tuesday'}>Tuesday</MenuItem>
                   <MenuItem value={'Wednesday'}>Wednesday</MenuItem>

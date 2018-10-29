@@ -27,14 +27,51 @@ const styles = theme => ({
   },
   appBar: {
     top: 'auto',
-    bottom: 48
-  }
+    bottom: 48,
+    // [theme.breakpoints.up('xs')]: {
+    //   height: 35,
+    //   bottom: 40,
+
+    // },
+    [theme.breakpoints.down('sm')]: {
+      // height: 'initial',
+      // bottom: 'initial',
+      height: 35,
+      bottom: 40,
+
+    },
+    
+    
+  },
+tabs: {
+  fontSize: 15,
+  // [theme.breakpoints.up('xs')]: {
+  //   fontSize: 30
+  // },
+  // [theme.breakpoints.up('sm')]: {
+  //   fontSize: 1
+  // },
+  
+
+
+},
+selected: {
+  backgroundColor: 'white',
+  fontSize: 15,
+},
+notselected: {
+  backgroundColor: '#e0e0e0',
+  fontSize: 15,
+},
 });
 
 class FullWidthTabs extends React.Component {
-  //   handleChange = (event, value) => {
-  //     this.setState({ value });
-  //   };
+  state = {
+    value: 'All'
+  }
+    // handleChange = (event, value) => {
+    //   this.setState({ value });
+    // };
 
   //   handleChangeIndex = index => {
   //     this.setState({ value: index });
@@ -43,6 +80,8 @@ class FullWidthTabs extends React.Component {
   callDealBoolean = (event, value) => {
     //running this breaks our code?
     // this.setState({ value });
+    this.setState({ value: value });
+
 
     var returnObj = {}
 
@@ -54,9 +93,24 @@ class FullWidthTabs extends React.Component {
     this.props.setStepperFdValue(value)
   }
 
+  getStyle = (myValue) => {
+    // return isActive ? this.props.classes.selected : this.props.classes.notselected
+    // console.log('THIS IS ACTIVE', isActive,this.props.foodCat,this, event.target)
+    console.log('LOOK HERE',myValue, this.state.value, this.props.classes)
+
+    if (myValue == this.state.value){
+      return this.props.classes.selected
+    }
+    else{
+      return this.props.classes.notselected
+    }
+  }
+
+  
+
   render() {
     const { classes } = this.props;
-    // const { value } = this.state;
+    const { value } = this.state;
 
     return (
       <div className={classes.root}>
@@ -66,12 +120,15 @@ class FullWidthTabs extends React.Component {
             onChange={this.callDealBoolean}
             indicatorColor="primary"
             textColor="primary"
+            scrollable
+            scrollButtons="on"
             fullWidth
+           
           >
-            <Tab value='All' label="All" />
-            <Tab value='hasFood' label="Has Food" />
-            <Tab value='hasBoth' label="Has Both" />
-            <Tab value='hasDrink' label="Has Drinks" />
+            <Tab className = {this.getStyle('All')} value='All' label="All" />
+            <Tab className = {this.getStyle('hasFood')} value='hasFood' label="Food"  />
+            <Tab className = {this.getStyle('hasBoth')} value='hasBoth' label="Both" />
+            <Tab className = {this.getStyle('hasDrink')} value='hasDrink' label="Drinks" />
 
           </Tabs>
         </AppBar>

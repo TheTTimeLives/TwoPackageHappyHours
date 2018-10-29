@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
 import { withRouter } from 'react-router-dom';
 
 
 
 import { STATES } from 'mongoose';
-const AnyReactComponent = ({ address1, address2, address3, restaurantName, hasFood, hasDrink, image, url, rating, review_count, id, onClick, thumbnail }) => <div myid = {id}>{<img  src={require('../Images/2xthumbnail.png')} id = {id} data-address1 = {address1} data-address2 = {address2} data-address3 = {address3} data-restaurantname = {restaurantName} data-hasfood = {hasFood} data-hasdrink = {hasDrink} data-image = {image} data-url = {url} data-rating = {rating} data-review_count = {review_count}  onClick={onClick}/>}</div>;
-const AnyReactComponentGrey = ({ address1, address2, address3, restaurantName, hasFood, hasDrink, image, url, rating, review_count, id, onClick, thumbnail }) => <div myid = {id}>{<img  src={require('../Images/2xthumbnailgrey.png')} id = {id} data-address1 = {address1} data-address2 = {address2} data-address3 = {address3} data-restaurantname = {restaurantName} data-hasfood = {hasFood} data-hasdrink = {hasDrink} data-image = {image} data-url = {url} data-rating = {rating} data-review_count = {review_count}  onClick={onClick}/>}</div>;
+const AnyReactComponent = ({ address1, address2, address3, restaurantName, hasFood, hasDrink, image, url, rating, review_count, id, onClick, thumbnail, style }) => <div myid = {id}>{<img  z-index = '1' src={require('../Images/2xthumbnail.png')} id = {id} data-address1 = {address1} data-address2 = {address2} data-address3 = {address3} data-restaurantname = {restaurantName} data-hasfood = {hasFood} data-hasdrink = {hasDrink} data-image = {image} data-url = {url} data-rating = {rating} data-review_count = {review_count}  onClick={onClick}/>}</div>;
+const AnyReactComponentGrey = ({ address1, address2, address3, restaurantName, hasFood, hasDrink, image, url, rating, review_count, id, onClick, thumbnail, style }) => <div myid = {id}>{<img  z-index='20' src={require('../Images/2xthumbnailgrey.png')} id = {id} data-address1 = {address1} data-address2 = {address2} data-address3 = {address3} data-restaurantname = {restaurantName} data-hasfood = {hasFood} data-hasdrink = {hasDrink} data-image = {image} data-url = {url} data-rating = {rating} data-review_count = {review_count}  onClick={onClick}/>}</div>;
 
 const button = ({ text }) => <div>{<button onClick={this.myFilter}><img src={require('../Images/1xLocation.png')} /></button>}</div>;
+
+const styles = theme => ({
+  index: {
+    zIndex: 5
+  }
+});
 
 
 class SimpleMap extends Component {
@@ -125,7 +133,7 @@ class SimpleMap extends Component {
     // for some reason these two things are not the same even though the parent has made a change to props and thusly re-rendered the component, and the state is still set to the old array
     // console.log(this.state.Restaurants);
     // console.log(this.state)
-
+    const {classes} = this.props;
    
     return (
       // Important! Always set the container height explicitly
@@ -156,6 +164,10 @@ class SimpleMap extends Component {
                   lat={restaurant.coordinates.latitude}
                   lng={restaurant.coordinates.longitude}
                   onClick={this.handleRestaurantClick.bind(this, restaurant)}
+                  className = {classes.index}
+                  style={{zIndex:'1'}}
+
+                  
                 />
                 }
 
@@ -166,6 +178,8 @@ class SimpleMap extends Component {
                 lat={restaurant.coordinates.latitude}
                 lng={restaurant.coordinates.longitude}
                 onClick={this.handleRestaurantClick.bind(this, restaurant)}
+                style={{zIndex:'10'}}
+
               />
 
               })}
@@ -206,8 +220,13 @@ class SimpleMap extends Component {
     );
   }
 }
+SimpleMap.propTypes = {
+  classes: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
+};
 
-export default withRouter(SimpleMap);
+export default withStyles(styles, { withTheme: true })(SimpleMap);
+// export default withRouter(SimpleMap);
 
 
 

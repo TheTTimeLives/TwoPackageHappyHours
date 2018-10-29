@@ -33,24 +33,24 @@ function MediaCard(props) {
         <CardMedia
           className={classes.media}
           image={props.currentTab.image}
-          title='Contemplative Reptile'
+          
         />
         <CardContent>
-          <Typography gutterBottom variant='h5' component='h2'>
+          <Typography gutterBottom variant='h5' component='h2' style = {{fontSize: 30}}>
             {props.currentTab.name}
           </Typography>
           {console.log('Media Card props below')}
           {console.log(props)}
-          <Typography component='p'>
+          <Typography component='p' style = {{fontSize: 17}}>
             {props.currentTab.address1}
             <br />
             {props.currentTab.address2}
             <br />
             {props.currentTab.address3}
-            <br />
-            Rating : {props.currentTab.rating}
-            <br />
-            Reviews : {props.currentTab.reviewCount}
+            {/* <br /> */}
+            Rating : {props.currentTab.rating} · {props.currentTab.reviewCount} reviews
+            
+            {/* Reviews : {props.currentTab.reviewCount} */}
 
           </Typography>
         </CardContent>

@@ -26,6 +26,8 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
     width: 200,
+    display: 'inline'
+
   },
   list: {
     width: 250,

@@ -27,9 +27,29 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   appBar: {
-    top: 'auto',
-    bottom: 96
-  }
+    
+      top: 'auto',
+    bottom: 96,
+    // display:'none'
+    // [theme.breakpoints.up('xs')]: {
+    //   height: 35,
+    //   bottom: 75,
+    // },
+    [theme.breakpoints.down('sm')]: {
+      height: 35,
+      bottom: 75,
+
+    },
+  },
+  selected: {
+    backgroundColor: 'white'
+  },
+  notselected: {
+    backgroundColor: '#e0e0e0'
+  },
+  indicator: {
+    backgroundColor: 'yellow',
+  },
 });
 
 class ScrollableTabsButtonAuto extends React.Component {
@@ -40,12 +60,26 @@ class ScrollableTabsButtonAuto extends React.Component {
 
     callFoodCat = (event, value) => {
       this.setState({ value });
+      this.setState({ value });
       console.log('TARGET BELOW');
       console.log(value);
       // send callback
       // console.log(event.target.i);
       console.log(event.target.attributes.getNamedItem('value'));
       this.props.sendFoodCat(value)
+    }
+
+    getStyle = (myValue) => {
+      // return isActive ? this.props.classes.selected : this.props.classes.notselected
+      // console.log('THIS IS ACTIVE', isActive,this.props.foodCat,this, event.target)
+      console.log('LOOK HERE',this.props.foodCat)
+
+      if (myValue == this.state.value){
+        return this.props.classes.selected
+      }
+      else{
+        return this.props.classes.notselected
+      }
     }
 
   render() {
@@ -70,22 +104,28 @@ class ScrollableTabsButtonAuto extends React.Component {
             indicatorColor="primary"
             textColor="primary"
             scrollable
-            scrollButtons="auto"
+            scrollButtons="on"
+            // classes = {classes.selected}
+            // classes={{
+            //   indicator: classes.indicator
+            // }}>
+
+            
             
           >
-            <Tab value = 'All' label="All" />
-            <Tab value = 'American (New)' label="American" />
-            <Tab value = 'Chinese' label="Chinese" />
-            <Tab value = 'Tex-Mex' label="Tex-Mex" />
-            <Tab value = 'French' label="French" />
-            <Tab value = 'Swedish' label="Swedish" />
-            <Tab value = 'Mediterranean' label="Mediterranean" />
-            <Tab value = 'Italian' label="Italian" />
-            <Tab value = 'Barbeque' label="BBQ" />
-            <Tab value = 'Burgers' label="Burgers" />
-            <Tab value = 'Thai' label="Thai" />
-            <Tab value = 'Vietnamese' label="Vietnamese" />
-            <Tab value = 'Cafes' label="Cafes" />
+            <Tab  className = {this.getStyle('All')} value = 'All' label="All" />
+            <Tab  className = {this.getStyle('American (New)')} value = 'American (New)' label="American" />
+            <Tab  className = {this.getStyle('Barbeque')} value = 'Barbeque' label="BBQ" />
+            <Tab  className = {this.getStyle('Burgers')} value = 'Burgers' label="Burgers" />
+            <Tab  className = {this.getStyle('Cafes')} value = 'Cafes' label="Cafes" />
+            <Tab  className = {this.getStyle('Chinese')} value = 'Chinese' label="Chinese" />
+            <Tab  className = {this.getStyle('French')} value = 'French' label="French" />
+            <Tab  className = {this.getStyle('Italian')} value = 'Italian' label="Italian" />
+            <Tab  className = {this.getStyle('Mediterranean')} value = 'Mediterranean' label="Mediterranean" />
+            <Tab  className = {this.getStyle('Tex-Mex')} value = 'Tex-Mex' label="Mexican" />
+            <Tab  className = {this.getStyle('Swedish')} value = 'Swedish' label="Swedish" />
+            <Tab  className = {this.getStyle('Thai')} value = 'Thai' label="Thai" />
+            <Tab  className = {this.getStyle('Vietnamese')} value = 'Vietnamese' label="Vietnamese" />
           </Tabs>
         </AppBar>
         {/* {value === "American (New)" && <TabContainer>American</TabContainer>}

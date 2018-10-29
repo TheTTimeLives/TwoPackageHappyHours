@@ -8,6 +8,8 @@ import Home from './components/pages/Home'
 const App = () => (
   <Router>
     <div>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
       {/* <Nav/> */}
       {/* <Jumbotron/> */}
       <Switch>

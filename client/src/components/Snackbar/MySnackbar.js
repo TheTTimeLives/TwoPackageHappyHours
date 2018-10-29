@@ -6,7 +6,8 @@ import Snackbar from '@material-ui/core/Snackbar';
 
 const styles = {
     root: {
-        background: 'green'
+        background: 'green',
+        borderRadius: 0
     }
 };
 

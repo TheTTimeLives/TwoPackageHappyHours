@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Icon from '@material-ui/core/Icon';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Divider from '@material-ui/core/Divider';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
@@ -61,15 +62,49 @@ const styles = theme => ({
   selectEmpty: {
     marginTop: theme.spacing.unit * 2,
   },
-  root: {
-    color: 'red'
-  },
+  // root: {
+  //   color: 'red'
+  // },
   label: {
     color: 'red'
   },
   text: {
     color: 'red'
   },
+  root: {
+    backgroundColor: '#4f4f4f',
+    borderRadius: 0,
+    color: 'white',
+    height: 50,
+    fontSize: 16,
+    // marginLeft: '50%',
+    // marginRight: '50%',
+    width: '100%',
+    '&:hover': {
+      backgroundColor: 'gray',
+    },
+  },
+  up: {
+    position: 'relative',
+    top: 7,
+    color: '#48d656',
+    '&:hover': {
+      color: '#7fe288',
+    }
+  },
+  down: {
+    position: 'relative',
+    top: 10,
+    color : '#f77489',
+    '&:hover': {
+      color: '#f79eac',
+    }
+  },
+  bodys: {
+    fontSize: 17,
+    
+  }
+ 
 
 });
 
@@ -166,6 +201,9 @@ class TemporaryDrawer extends React.Component {
     const { classes, currentTab, toggleDrawerVisibility, drawerVisible } = this.props;
     const filteredArray = this.props.deals.filter(this.isId);
 
+    const isNormal = {
+      backgroundColor: 'lightgray',
+    }
     const isGood = {
       color: 'green'
     }
@@ -192,16 +230,16 @@ class TemporaryDrawer extends React.Component {
         {/* <IntegrationReactSelect /> */}
         {/* Summary, the times, the day, user is icebox */}
         <Button onClick={this.handleClickOpen}
-        disableTypography
-
-        style = {buttonStyle}
-          // ContentProps={{
-          //   classes: {
-          //     root: classes.root,
-          //     label: classes.label,
-          //     text: classes.text
-          //   }
-          // }}
+          // disableTypography
+          className={classes.root}
+        // style = {buttonStyle}
+        // ContentProps={{
+        //   classes: {
+        //     root: classes.root,
+        //     label: classes.label,
+        //     text: classes.text
+        //   }
+        // }}
         >
           ADD NEW SPECIAL
         </Button>
@@ -230,6 +268,8 @@ class TemporaryDrawer extends React.Component {
             endTimePassed = endTimeChangeNew.format('h:mm A');
           }
 
+          let quoteSumm = `" ${deals.summary} "`
+
           console.log('DEAL CHANGERS', deals, deals.timeStart, deals.timeEnd, startTimePassed, endTimePassed);
 
 
@@ -245,19 +285,26 @@ class TemporaryDrawer extends React.Component {
                     <ListItemText classes={isGood} primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
                   </ListItem>
                 </List>
-                <List>
-                  <ListItem button>
+                <List style={isNormal}>
+                  <ListItem >
                     {/* <ListItemIcon>
                       <InboxIcon />
                     </ListItemIcon> */}
-                    <ListItemText disableTypography style={isGood} primary={deals.summary} />
+                    <ListItemText disableTypography className = {classes.bodys} style={isGood} primary={deals.summary} />
                   </ListItem>
                   <ListItem>
-                    <div> Current Up: {deals.isGood}</div>
-                    <div> Current Down: {deals.isBad}</div>
-                    <input type="image" data-name = {deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp} src={require('../Images/2xbaseline_check_circle_outline_black_18dp.png')} />
-                    <input type="image" data-name = {deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown} src={require('../Images/2xbaseline_highlight_off_black_18dp.png')} />
-                  </ListItem>
+                  <div style={{
+                    display: 'flex',
+                    position: 'relative',
+                    left: 100
+                  }}>
+                  <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                    <div style = {{padding : 8}}> {deals.isGood} </div>
+                    <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+
+                    <div style = {{padding : 8}}> {deals.isBad} </div>
+                  </div>
+                </ListItem>
                 </List>
               </div>
             )
@@ -276,19 +323,26 @@ class TemporaryDrawer extends React.Component {
                     <ListItemText primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
                   </ListItem>
                 </List>
-                <List>
-                  <ListItem button>
+                <List style={isNormal}>
+                  <ListItem  >
                     {/* <ListItemIcon>
                       <InboxIcon />
                     </ListItemIcon> */}
-                    <ListItemText disableTypography style={isBad} primary={deals.summary} />
+                    <ListItemText disableTypography className = {classes.bodys} style={isBad} primary={deals.summary} />
                   </ListItem>
                   <ListItem>
-                    <div> Current Up: {deals.isGood}</div>
-                    <div> Current Down: {deals.isBad}</div>
-                    <input type="image" data-name = {deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp} src={require('../Images/2xbaseline_check_circle_outline_black_18dp.png')} />
-                    <input type="image" data-name = {deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown} src={require('../Images/2xbaseline_highlight_off_black_18dp.png')} />
-                  </ListItem>
+                  <div style={{
+                    display: 'flex',
+                    position: 'relative',
+                    left: 100
+                  }}>
+                  <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                    <div style = {{padding : 8}}> {deals.isGood} </div>
+                    <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+
+                    <div style = {{padding : 8}}> {deals.isBad} </div>
+                  </div>
+                </ListItem>
                 </List>
               </div>
             )
@@ -307,19 +361,26 @@ class TemporaryDrawer extends React.Component {
                   <ListItemText primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
                 </ListItem>
               </List>
-              <List>
-                <ListItem button>
+              <List style={isNormal}>
+                <ListItem n>
                   {/* <ListItemIcon>
                     <InboxIcon />
                   </ListItemIcon> */}
                   {/* I'M GOING INSANE */}
-                  <ListItemText disableTypography primary={deals.summary} />
+                  <ListItemText disableTypography className = {classes.bodys} style={isNormal} primary={deals.summary} />
                 </ListItem>
-                <ListItem>
-                  <div> Current Up: {deals.isGood}</div>
-                  <div> Current Down: {deals.isBad}</div>
-                  <input type="image" data-name = {deals.restaurantAlias} data-userId={deals.userId} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp} src={require('../Images/2xbaseline_check_circle_outline_black_18dp.png')} />
-                  <input type="image" data-name = {deals.restaurantAlias} data-userId={deals.userId} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown} src={require('../Images/2xbaseline_highlight_off_black_18dp.png')} />
+                <ListItem disableTypography style = {{paddingTop: 0, paddingBottom: 0}}>
+                  <div style={{
+                    display: 'flex',
+                    position: 'relative',
+                    left: 100
+                  }}>
+                  <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                    <div style = {{padding : 8}}> {deals.isGood} </div>
+                    <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+
+                    <div style = {{padding : 8}}> {deals.isBad} </div>
+                  </div>
                 </ListItem>
               </List>
             </div>
