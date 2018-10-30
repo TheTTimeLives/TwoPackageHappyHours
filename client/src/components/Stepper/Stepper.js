@@ -123,6 +123,7 @@ class FullWidthTabs extends React.Component {
             indicatorColor="primary"
             textColor="primary"
             fullWidth
+            scrollable
           >
             {/* what is the value that this is gonna send? The value will be the command to set the relevant modals to open. */}
             <Tab value='Days' label={this.props.currentDay} className = {this.getStyle('Days')} />
