@@ -148,8 +148,8 @@ class TemporaryDrawer extends React.Component {
   }
 
   isDay = (day) => {
+    console.log('CURRENT DAY ANALYZED',day)
     if ((day.timeDay) == this.currentDay || (day.timeDay) == 'Everyday' || (day.timeDay) == 'All') {
-      console.log('CURRENT DAY ANALYZED',day)
       return true;
     }
   }
