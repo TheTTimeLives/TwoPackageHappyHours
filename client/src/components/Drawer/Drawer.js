@@ -149,7 +149,9 @@ class TemporaryDrawer extends React.Component {
 
   isDay = (day) => {
     console.log('CURRENT DAY ANALYZED',day)
-    if ((day.timeDay) == this.currentDay || (day.timeDay) == 'Everyday' || (day.timeDay) == 'All') {
+    // console.log('TESTING SOME SHEET', this.props.currentDay)
+    //I don't think this logic is running on the whole array that comes back
+    if ((day.timeDay) == this.props.currentDay || (day.timeDay) == 'Everyday' || (day.timeDay) == 'All') {
       return true;
     }
   }
