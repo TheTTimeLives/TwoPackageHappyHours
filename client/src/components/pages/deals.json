@@ -1,0 +1,1256 @@
+[
+  {
+    "_id": {
+      "$oid": "5bd20e6f29cdee0ad1b53360"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "cxVsg05tnysqe03tudgkTQ",
+    "restaurantAlias": "tabla-restaurant-orlando",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "All",
+    "timeStart": 1200,
+    "timeEnd": 1430,
+    "summary": "Soup, Salad, Appetizer, and Desert for $10.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd20eb929cdee0ad1b53361"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "cxVsg05tnysqe03tudgkTQ",
+    "restaurantAlias": "tabla-restaurant-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 1830,
+    "timeEnd": 45,
+    "summary": "$3 Drafts and $6 Cocktails",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd212f459bc630bb7bf1807"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "ZrQ1UB8GEQde1eHJJuz8Ug",
+    "restaurantAlias": "china-tea-orlando-2",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "All",
+    "timeStart": 1100,
+    "timeEnd": 1500,
+    "summary": "Entrees served with Fried Rice -- $1 Extra for Egg Roll or Daily Soup",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21a6f15d2120da40d7d43"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Vlwa2HgckFlUmAqTN1HEfQ",
+    "restaurantAlias": "teak-neighborhood-grill-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "$5 Cocktails and $6 Appetizers",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21a9b15d2120da40d7d44"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Vlwa2HgckFlUmAqTN1HEfQ",
+    "restaurantAlias": "teak-neighborhood-grill-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 2200,
+    "timeEnd": 100,
+    "summary": "$5 Cocktails and $6 Appetizers",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21b2515d2120da40d7d45"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "VySTtvUxwHWNVSYSyQH6tw",
+    "restaurantAlias": "taste-of-chengdu-orlando-3",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Friday",
+    "timeStart": 1130,
+    "timeEnd": 1430,
+    "summary": "Entrees served with Fried Rice",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21d4215d2120da40d7d46"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "WHYbJ7GFsVa5MBp-XWyAgQ",
+    "restaurantAlias": "bikes-beans-and-bordeaux-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Monday",
+    "timeStart": 1700,
+    "timeEnd": 1900,
+    "summary": "$1 Off Beer and Wine",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21d6615d2120da40d7d47"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "WHYbJ7GFsVa5MBp-XWyAgQ",
+    "restaurantAlias": "bikes-beans-and-bordeaux-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Tuesday",
+    "timeStart": 1700,
+    "timeEnd": 1900,
+    "summary": "$1 Off Beer and Wine",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21dc015d2120da40d7d48"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "WHYbJ7GFsVa5MBp-XWyAgQ",
+    "restaurantAlias": "bikes-beans-and-bordeaux-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Wednesday",
+    "timeStart": 1700,
+    "timeEnd": 1900,
+    "summary": "$1 Off Beer and Wine",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21dd715d2120da40d7d49"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "WHYbJ7GFsVa5MBp-XWyAgQ",
+    "restaurantAlias": "bikes-beans-and-bordeaux-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Thursday",
+    "timeStart": 1700,
+    "timeEnd": 1900,
+    "summary": "$1 Off Beer and Wine",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21de615d2120da40d7d4a"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "WHYbJ7GFsVa5MBp-XWyAgQ",
+    "restaurantAlias": "bikes-beans-and-bordeaux-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Friday",
+    "timeStart": 1700,
+    "timeEnd": 1900,
+    "summary": "$1 Off Beer and Wine",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21e4f15d2120da40d7d4b"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "CNTU8Q1ecCy-hYNUCRMpsA",
+    "restaurantAlias": "tijuana-flats-winter-park",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "$1 Off Draft Beer",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21e9615d2120da40d7d4c"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "CNTU8Q1ecCy-hYNUCRMpsA",
+    "restaurantAlias": "tijuana-flats-winter-park",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Tuesday",
+    "timeStart": 1000,
+    "timeEnd": 2200,
+    "summary": "Taco Tuesday - Two Tacos, Chips, and Drink - $5.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21ec415d2120da40d7d4d"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "CNTU8Q1ecCy-hYNUCRMpsA",
+    "restaurantAlias": "tijuana-flats-winter-park",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Thursday",
+    "timeStart": 1000,
+    "timeEnd": 2200,
+    "summary": "Burrito, Chips, and Drink - $5.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21f9215d2120da40d7d4e"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "ghgdfqts7qNytHv9LxVNCQ",
+    "restaurantAlias": "tijuana-flats-orlando-10",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "$1 Off Draft Beer",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21fc915d2120da40d7d4f"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "ghgdfqts7qNytHv9LxVNCQ",
+    "restaurantAlias": "tijuana-flats-orlando-10",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Tuesday",
+    "timeStart": 1000,
+    "timeEnd": 2200,
+    "summary": "Taco Tuesday - Two Tacos, Chips, and Drink - $5.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd21ff315d2120da40d7d50"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "ghgdfqts7qNytHv9LxVNCQ",
+    "restaurantAlias": "tijuana-flats-orlando-10",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Thursday",
+    "timeStart": 1000,
+    "timeEnd": 2200,
+    "summary": "Burrito, Chips, and Drink - $5.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2224130ffeb0f6f025cad"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "X4TeELpLhlpyntiNmAHHYg",
+    "restaurantAlias": "johnnys-fillin-station-orlando-2",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 1000,
+    "timeEnd": 1400,
+    "summary": "Sandwich, Beer, and Soda - $10",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2230a30ffeb0f6f025cae"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "X4TeELpLhlpyntiNmAHHYg",
+    "restaurantAlias": "johnnys-fillin-station-orlando-2",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Monday",
+    "timeStart": 1700,
+    "timeEnd": 230,
+    "summary": "1/2 Off Appetizers",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2233830ffeb0f6f025caf"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "X4TeELpLhlpyntiNmAHHYg",
+    "restaurantAlias": "johnnys-fillin-station-orlando-2",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Monday",
+    "timeStart": 1030,
+    "timeEnd": 230,
+    "summary": "10 Wings for $8",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd223d830ffeb0f6f025cb0"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "XgpY8hOd-nci9CAW-tAVrw",
+    "restaurantAlias": "p-and-d-soulfood-kitchen-orlando",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Tuesday",
+    "timeStart": 1100,
+    "timeEnd": 1900,
+    "summary": "$5 Plates w/ Rice, Vegetables and Cornbread",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2242830ffeb0f6f025cb1"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "XgpY8hOd-nci9CAW-tAVrw",
+    "restaurantAlias": "p-and-d-soulfood-kitchen-orlando",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Wednesday",
+    "timeStart": 1100,
+    "timeEnd": 1900,
+    "summary": "$5 Plates w/ Rice, Vegetable and Cornbread",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2243e30ffeb0f6f025cb2"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "XgpY8hOd-nci9CAW-tAVrw",
+    "restaurantAlias": "p-and-d-soulfood-kitchen-orlando",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Thursday",
+    "timeStart": 1100,
+    "timeEnd": 1900,
+    "summary": "$5 Plates w/ Rice, Vegetable and Cornbread",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2251630ffeb0f6f025cb3"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "P1P5NDc56I3UIB9BgumliA",
+    "restaurantAlias": "tijuana-flats-orlando-3",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "$1 Off Draft Beer",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2254230ffeb0f6f025cb4"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "P1P5NDc56I3UIB9BgumliA",
+    "restaurantAlias": "tijuana-flats-orlando-3",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Tuesday",
+    "timeStart": 1000,
+    "timeEnd": 2200,
+    "summary": "Taco Tuesday - Two Tacos, Chips, and Drink - $5.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2255830ffeb0f6f025cb5"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "P1P5NDc56I3UIB9BgumliA",
+    "restaurantAlias": "tijuana-flats-orlando-3",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Thursday",
+    "timeStart": 1000,
+    "timeEnd": 2200,
+    "summary": "Burrito, Chips, and Drink - $5.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2266730ffeb0f6f025cb6"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "LVS4iBoX_E6JKT1AOg4gJQ",
+    "restaurantAlias": "tijuana-flats-orlando-9",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "$1 Off Draft Beer",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2268b30ffeb0f6f025cb7"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "LVS4iBoX_E6JKT1AOg4gJQ",
+    "restaurantAlias": "tijuana-flats-orlando-9",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Tuesday",
+    "timeStart": 1000,
+    "timeEnd": 2200,
+    "summary": "Taco Tuesday - Two Tacos, Chips, and Drink - $5.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd226b630ffeb0f6f025cb8"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "LVS4iBoX_E6JKT1AOg4gJQ",
+    "restaurantAlias": "tijuana-flats-orlando-9",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Thursday",
+    "timeStart": 1000,
+    "timeEnd": 2200,
+    "summary": "Burrito, Chips, and Drink - $5.99",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2274930ffeb0f6f025cb9"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Xq1Y4iY5TzOGbHVlikvnkw",
+    "restaurantAlias": "dixie-dharma-orlando-2",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Monday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "Happy Hour Slider Sandwich",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd227c830ffeb0f6f025cba"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Xq1Y4iY5TzOGbHVlikvnkw",
+    "restaurantAlias": "dixie-dharma-orlando-2",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Tuesday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "Happy Hour Slider Sandwich, $4 Drafts, $5 Wines, $5 Mimosas, $1 Off Bottled Alcoholic Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd227d930ffeb0f6f025cbb"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Xq1Y4iY5TzOGbHVlikvnkw",
+    "restaurantAlias": "dixie-dharma-orlando-2",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Monday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "Happy Hour Slider Sandwich, $4 Drafts, $5 Wines, $5 Mimosas, $1 Off Bottled Alcoholic Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd227f530ffeb0f6f025cbc"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Xq1Y4iY5TzOGbHVlikvnkw",
+    "restaurantAlias": "dixie-dharma-orlando-2",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Wednesday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "Happy Hour Slider Sandwich, $4 Drafts, $5 Wines, $5 Mimosas, $1 Off Bottled Alcoholic Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2281230ffeb0f6f025cbd"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Xq1Y4iY5TzOGbHVlikvnkw",
+    "restaurantAlias": "dixie-dharma-orlando-2",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Thursday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "Happy Hour Slider Sandwich, $4 Drafts, $5 Wines, $5 Mimosas, $1 Off Bottled Alcoholic Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2282130ffeb0f6f025cbe"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Xq1Y4iY5TzOGbHVlikvnkw",
+    "restaurantAlias": "dixie-dharma-orlando-2",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Friday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "Happy Hour Slider Sandwich, $4 Drafts, $5 Wines, $5 Mimosas, $1 Off Bottled Alcoholic Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2297a30ffeb0f6f025cbf"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Y2taVEXf6c9GMSj-L0de9w",
+    "restaurantAlias": "lafayettes-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Monday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "$3 Well Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd2298e30ffeb0f6f025cc0"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Y2taVEXf6c9GMSj-L0de9w",
+    "restaurantAlias": "lafayettes-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Tuesday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "$3 Well Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd229a130ffeb0f6f025cc1"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Y2taVEXf6c9GMSj-L0de9w",
+    "restaurantAlias": "lafayettes-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Wednesday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "$3 Well Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd229b230ffeb0f6f025cc2"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Y2taVEXf6c9GMSj-L0de9w",
+    "restaurantAlias": "lafayettes-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Thursday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "$3 Well Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd229c030ffeb0f6f025cc3"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "Y2taVEXf6c9GMSj-L0de9w",
+    "restaurantAlias": "lafayettes-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Sunday",
+    "timeStart": 1500,
+    "timeEnd": 1800,
+    "summary": "$3 Well Drinks",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22acb30ffeb0f6f025cc4"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YAmtbEdsYzSm5NPurU_SaA",
+    "restaurantAlias": "hamburger-marys-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Thursday",
+    "timeStart": 1100,
+    "timeEnd": 2230,
+    "summary": "$5 Long Island Iced Tea",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22b5130ffeb0f6f025cc5"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YAmtbEdsYzSm5NPurU_SaA",
+    "restaurantAlias": "hamburger-marys-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Tuesday",
+    "timeStart": 1100,
+    "timeEnd": 1900,
+    "summary": "Happy Hour - 1/2 Off Well Drinks, Draft Beers, and House Wines. $5 Smirnoff, $6 Kettle One Vodka, $6 Titos, $6 Captain Morgan, and $7 Jack Daniels and Crown Royale",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22b6230ffeb0f6f025cc6"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YAmtbEdsYzSm5NPurU_SaA",
+    "restaurantAlias": "hamburger-marys-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Thursday",
+    "timeStart": 1100,
+    "timeEnd": 1900,
+    "summary": "Happy Hour - 1/2 Off Well Drinks, Draft Beers, and House Wines. $5 Smirnoff, $6 Kettle One Vodka, $6 Titos, $6 Captain Morgan, and $7 Jack Daniels and Crown Royale",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22b7330ffeb0f6f025cc7"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YAmtbEdsYzSm5NPurU_SaA",
+    "restaurantAlias": "hamburger-marys-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Monday",
+    "timeStart": 1100,
+    "timeEnd": 1500,
+    "summary": "Happy Hour - 1/2 Off Well Drinks, Draft Beers, and House Wines. $5 Smirnoff, $6 Kettle One Vodka, $6 Titos, $6 Captain Morgan, and $7 Jack Daniels and Crown Royale",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22b8330ffeb0f6f025cc8"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YAmtbEdsYzSm5NPurU_SaA",
+    "restaurantAlias": "hamburger-marys-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "Wednesday",
+    "timeStart": 1100,
+    "timeEnd": 2230,
+    "summary": "Happy Hour - 1/2 Off Well Drinks, Draft Beers, and House Wines. $5 Smirnoff, $6 Kettle One Vodka, $6 Titos, $6 Captain Morgan, and $7 Jack Daniels and Crown Royale",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22bfe30ffeb0f6f025cc9"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YQGPI7PvX01FUgjlLbpMuw",
+    "restaurantAlias": "le-cafe-de-paris-orlando-4",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Tuesday",
+    "timeStart": 1700,
+    "timeEnd": 2000,
+    "summary": "BOGO Croissants and Pastries. $4 glasses of Wine",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22c1930ffeb0f6f025cca"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YQGPI7PvX01FUgjlLbpMuw",
+    "restaurantAlias": "le-cafe-de-paris-orlando-4",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Friday",
+    "timeStart": 1700,
+    "timeEnd": 2000,
+    "summary": "BOGO Croissants and Pastries. $4 glasses of Wine",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22cff30ffeb0f6f025ccb"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YduPqC8SMpe3ObSeonErDw",
+    "restaurantAlias": "the-oceanaire-seafood-room-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Monday",
+    "timeStart": 2100,
+    "timeEnd": 2200,
+    "summary": "$6 - $8 Small Bites,  $12 - $20 Big Bites, $5 Bottled Beer, $6 Wine Glass, $7 Specialty Drinks, $8 Martinis",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22d0d30ffeb0f6f025ccc"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YduPqC8SMpe3ObSeonErDw",
+    "restaurantAlias": "the-oceanaire-seafood-room-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Tuesday",
+    "timeStart": 2100,
+    "timeEnd": 2200,
+    "summary": "$6 - $8 Small Bites,  $12 - $20 Big Bites, $5 Bottled Beer, $6 Wine Glass, $7 Specialty Drinks, $8 Martinis",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22d2030ffeb0f6f025ccd"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YduPqC8SMpe3ObSeonErDw",
+    "restaurantAlias": "the-oceanaire-seafood-room-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Wednesday",
+    "timeStart": 2100,
+    "timeEnd": 2200,
+    "summary": "$6 - $8 Small Bites,  $12 - $20 Big Bites, $5 Bottled Beer, $6 Wine Glass, $7 Specialty Drinks, $8 Martinis",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22d2e30ffeb0f6f025cce"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YduPqC8SMpe3ObSeonErDw",
+    "restaurantAlias": "the-oceanaire-seafood-room-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Thursday",
+    "timeStart": 2100,
+    "timeEnd": 2200,
+    "summary": "$6 - $8 Small Bites,  $12 - $20 Big Bites, $5 Bottled Beer, $6 Wine Glass, $7 Specialty Drinks, $8 Martinis",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22d4030ffeb0f6f025ccf"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YduPqC8SMpe3ObSeonErDw",
+    "restaurantAlias": "the-oceanaire-seafood-room-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Friday",
+    "timeStart": 1700,
+    "timeEnd": 1900,
+    "summary": "$6 - $8 Small Bites,  $12 - $20 Big Bites, $5 Bottled Beer, $6 Wine Glass, $7 Specialty Drinks, $8 Martinis",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22d5330ffeb0f6f025cd0"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YduPqC8SMpe3ObSeonErDw",
+    "restaurantAlias": "the-oceanaire-seafood-room-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Saturday",
+    "timeStart": 1700,
+    "timeEnd": 1900,
+    "summary": "$6 - $8 Small Bites,  $12 - $20 Big Bites, $5 Bottled Beer, $6 Wine Glass, $7 Specialty Drinks, $8 Martinis",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd22d6030ffeb0f6f025cd1"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "YduPqC8SMpe3ObSeonErDw",
+    "restaurantAlias": "the-oceanaire-seafood-room-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Sunday",
+    "timeStart": 1700,
+    "timeEnd": 1900,
+    "summary": "$6 - $8 Small Bites,  $12 - $20 Big Bites, $5 Bottled Beer, $6 Wine Glass, $7 Specialty Drinks, $8 Martinis",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd23077e821651161bfdad1"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "_0drE6AfVk0jw-ZyEEX7Wg",
+    "restaurantAlias": "mediterranean-blue-orlando",
+    "happyFood": false,
+    "happyDrink": true,
+    "timeDay": "All",
+    "timeStart": 1500,
+    "timeEnd": 1900,
+    "summary": "$1 Off Beer and Wine",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd23309b5b2cb126540bed5"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "aBdD__fQY23MKOIPmekrXw",
+    "restaurantAlias": "the-whiskey-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Monday",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "Variety of Bourbon's, Whiskey's, Gins, and Rums for $3.88. 1/2 Off Appetizers -  Goat Cheese, Mussels, Fried Pickles, Fried Mushrooms, Two Junior Burgers ($7 - $8), and Hummus",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd23318b5b2cb126540bed6"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "aBdD__fQY23MKOIPmekrXw",
+    "restaurantAlias": "the-whiskey-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Tuesday",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "Variety of Bourbon's, Whiskey's, Gins, and Rums for $3.88. 1/2 Off Appetizers -  Goat Cheese, Mussels, Fried Pickles, Fried Mushrooms, Two Junior Burgers ($7 - $8), and Hummus",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd23324b5b2cb126540bed7"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "aBdD__fQY23MKOIPmekrXw",
+    "restaurantAlias": "the-whiskey-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Wednesday",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "Variety of Bourbon's, Whiskey's, Gins, and Rums for $3.88. 1/2 Off Appetizers -  Goat Cheese, Mussels, Fried Pickles, Fried Mushrooms, Two Junior Burgers ($7 - $8), and Hummus",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd23331b5b2cb126540bed8"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "aBdD__fQY23MKOIPmekrXw",
+    "restaurantAlias": "the-whiskey-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Thursday",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "Variety of Bourbon's, Whiskey's, Gins, and Rums for $3.88. 1/2 Off Appetizers -  Goat Cheese, Mussels, Fried Pickles, Fried Mushrooms, Two Junior Burgers ($7 - $8), and Hummus",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd23340b5b2cb126540bed9"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "aBdD__fQY23MKOIPmekrXw",
+    "restaurantAlias": "the-whiskey-orlando",
+    "happyFood": true,
+    "happyDrink": true,
+    "timeDay": "Friday",
+    "timeStart": 1600,
+    "timeEnd": 1900,
+    "summary": "Variety of Bourbon's, Whiskey's, Gins, and Rums for $3.88. 1/2 Off Appetizers -  Goat Cheese, Mussels, Fried Pickles, Fried Mushrooms, Two Junior Burgers ($7 - $8), and Hummus",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd233cfb5b2cb126540beda"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "_XkcQeje62qU7CcWUQ-zxg",
+    "restaurantAlias": "taste-of-peru-orlando-8",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Monday",
+    "timeStart": 1100,
+    "timeEnd": 1500,
+    "summary": "One Appetizer, One Entree, and One Drink for $8.50",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd233deb5b2cb126540bedb"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "_XkcQeje62qU7CcWUQ-zxg",
+    "restaurantAlias": "taste-of-peru-orlando-8",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Tuesday",
+    "timeStart": 1100,
+    "timeEnd": 1500,
+    "summary": "One Appetizer, One Entree, and One Drink for $8.50",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd233eab5b2cb126540bedc"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "_XkcQeje62qU7CcWUQ-zxg",
+    "restaurantAlias": "taste-of-peru-orlando-8",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Wednesday",
+    "timeStart": 1100,
+    "timeEnd": 1500,
+    "summary": "One Appetizer, One Entree, and One Drink for $8.50",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd233f9b5b2cb126540bedd"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "_XkcQeje62qU7CcWUQ-zxg",
+    "restaurantAlias": "taste-of-peru-orlando-8",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Thursday",
+    "timeStart": 1100,
+    "timeEnd": 1500,
+    "summary": "One Appetizer, One Entree, and One Drink for $8.50",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd23406b5b2cb126540bede"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "_XkcQeje62qU7CcWUQ-zxg",
+    "restaurantAlias": "taste-of-peru-orlando-8",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Friday",
+    "timeStart": 1100,
+    "timeEnd": 1500,
+    "summary": "One Appetizer, One Entree, and One Drink for $8.50",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5bd23495b5b2cb126540bedf"
+    },
+    "isGoodUsers": [],
+    "isBadUsers": [],
+    "userId": "105603490434959",
+    "businessId": "afY2kA4zwNKiI0sSprgJsQ",
+    "restaurantAlias": "nypd-pizza-orlando-3",
+    "happyFood": true,
+    "happyDrink": false,
+    "timeDay": "Tuesday",
+    "timeStart": 1100,
+    "timeEnd": 2100,
+    "summary": "Get a Free Cheese Pizza with Purchase of a Specialty or 1 Topping Pizza",
+    "isGood": 0,
+    "isBad": 0,
+    "__v": 0
+  }
+]

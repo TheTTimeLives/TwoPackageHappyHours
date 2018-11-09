@@ -936,6 +936,7 @@ class Home extends Component {
           currentUserName={this.state.currentUserName}
           currentUserId={this.state.currentUserId}
           handleOpen={this.handleOpen}
+          currentDay = {this.state.currentDay}
         />
 
         <SimpleMap

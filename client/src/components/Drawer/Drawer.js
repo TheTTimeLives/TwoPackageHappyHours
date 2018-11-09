@@ -147,6 +147,13 @@ class TemporaryDrawer extends React.Component {
     }
   }
 
+  isDay = (day) => {
+    if ((day.timeDay) == this.currentDay || (day.timeDay) == 'Everyday' || (day.timeDay) == 'All') {
+      console.log('CURRENT DAY ANALYZED',day)
+      return true;
+    }
+  }
+
   sendUp = (event) => {
     let vote = event.target.attributes.getNamedItem('data-vote').value;
     let busId = event.target.attributes.getNamedItem('data-busId').value;
@@ -200,6 +207,11 @@ class TemporaryDrawer extends React.Component {
   render() {
     const { classes, currentTab, toggleDrawerVisibility, drawerVisible } = this.props;
     const filteredArray = this.props.deals.filter(this.isId);
+    console.log('This is filtered Array',filteredArray)
+    const bilteredArray = filteredArray.filter(this.isDay);
+    console.log('This is biltered Array',bilteredArray)
+
+
 
     const isNormal = {
       backgroundColor: 'lightgray',
@@ -219,6 +231,8 @@ class TemporaryDrawer extends React.Component {
       // marginRight: '50%',
       width: '100%'
     }
+
+
 
 
 
@@ -243,7 +257,7 @@ class TemporaryDrawer extends React.Component {
         >
           ADD NEW SPECIAL
         </Button>
-        {filteredArray.map(deals => {
+        {bilteredArray.map(deals => {
           // console.log('deals', deals)
 
           var startTimeChange = deals.timeStart;

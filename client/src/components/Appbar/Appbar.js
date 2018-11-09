@@ -88,7 +88,7 @@ function ButtonAppBar (props) {
         <Toolbar class={classes.root}>
           {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Menu"> */}
           {/* <MenuIcon/> */}
-          <Drawer handleOpen= {props.handleOpen} currentUserId={props.currentUserId} getUp={props.getUp} getDown={props.getDown} deals={deals} open={props.open} getModalState={props.getModalState} drawerVisible={drawerVisible} currentTab={currentTab} toggleDrawerVisibility={toggleDrawerVisibility} />
+          <Drawer currentDay = {props.currentDay} handleOpen= {props.handleOpen} currentUserId={props.currentUserId} getUp={props.getUp} getDown={props.getDown} deals={deals} open={props.open} getModalState={props.getModalState} drawerVisible={drawerVisible} currentTab={currentTab} toggleDrawerVisibility={toggleDrawerVisibility} />
           {/* </IconButton> */}
           <Typography disableTypography  variant='h6'  color='inherit'  class = {classes.h6} className={classes.grow}>
             ORLANDRINKS
