@@ -7,8 +7,8 @@ import { withRouter } from 'react-router-dom';
 
 
 import { STATES } from 'mongoose';
-const AnyReactComponent = ({ address1, address2, address3, restaurantName, hasFood, hasDrink, image, url, rating, review_count, id, onClick, thumbnail, style }) => <div myid = {id}>{<img  z-index = '1' src={require('../Images/2xthumbnailline.png')} id = {id} data-address1 = {address1} data-address2 = {address2} data-address3 = {address3} data-restaurantname = {restaurantName} data-hasfood = {hasFood} data-hasdrink = {hasDrink} data-image = {image} data-url = {url} data-rating = {rating} data-review_count = {review_count}  onClick={onClick}/>}</div>;
-const AnyReactComponentGrey = ({ address1, address2, address3, restaurantName, hasFood, hasDrink, image, url, rating, review_count, id, onClick, thumbnail, style }) => <div myid = {id}>{<img  z-index='20' src={require('../Images/2xthumbnailgreyline.png')} id = {id} data-address1 = {address1} data-address2 = {address2} data-address3 = {address3} data-restaurantname = {restaurantName} data-hasfood = {hasFood} data-hasdrink = {hasDrink} data-image = {image} data-url = {url} data-rating = {rating} data-review_count = {review_count}  onClick={onClick}/>}</div>;
+const AnyReactComponent = ({ address1, address2, address3, restaurantName, hasFood, hasDrink, image, url, rating, review_count, id, onClick, thumbnail, style }) => <div myid={id}>{<img z-index='1' src={require('../Images/2xthumbnailline.png')} id={id} data-address1={address1} data-address2={address2} data-address3={address3} data-restaurantname={restaurantName} data-hasfood={hasFood} data-hasdrink={hasDrink} data-image={image} data-url={url} data-rating={rating} data-review_count={review_count} onClick={onClick} />}</div>;
+const AnyReactComponentGrey = ({ address1, address2, address3, restaurantName, hasFood, hasDrink, image, url, rating, review_count, id, onClick, thumbnail, style }) => <div myid={id}>{<img z-index='20' src={require('../Images/2xthumbnailgreyline.png')} id={id} data-address1={address1} data-address2={address2} data-address3={address3} data-restaurantname={restaurantName} data-hasfood={hasFood} data-hasdrink={hasDrink} data-image={image} data-url={url} data-rating={rating} data-review_count={review_count} onClick={onClick} />}</div>;
 
 const button = ({ text }) => <div>{<button onClick={this.myFilter}><img src={require('../Images/1xLocation.png')} /></button>}</div>;
 
@@ -18,37 +18,46 @@ const styles = theme => ({
   }
 });
 
+const mapCredentials =  { key: 'AIzaSyA46ttkQXjotLXDI1xpNOCkUz5GCRRrQTI' }
 
 class SimpleMap extends Component {
   //the top of our lifecycle, and a state always has to be declared here
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     center: {
+  //       lat: 28.5383355,
+  //       lng: -81.37923649999999
+  //     },
+  //     latitude: '',
+  //     longitude: '',
+  //     categories: [],
+  //     Restaurants: props.Restaurants,
+  //     //have to fix this because it won't allow our state to update
+  //   }
+  // }
+
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      center: {},
-      latitude: '',
-      longitude: '',
+      center: {
+        lat: 28.5383355,
+        lng: -81.37923649999999
+      },
+      zoom: 11,
       categories: [],
       Restaurants: props.Restaurants,
-      //have to fix this because it won't allow our state to update
     }
-    // this.state = {
-    //   center: props.center,
-    //   latitude: props.latitude,
-    //   longitude: props.longitude,
-    //   categories: props.categories,
-    //   Restaurants: props.Restaurants,
-    //   //have to fix this because it won't allow our state to update
-    // }
   }
 
-  // the second level of our lifecycle, a static prop that just exists
-  static defaultProps = {
-    center: {
-      lat: 28.5383355,
-      lng: -81.37923649999999
-    },
-    zoom: 11
-  };
+  // the second level of our lifecycle, a static prop that just exists. FOR SOME REASON, THE MAP HOC NEEDS A STATIC PROP, WHICH MAKES LIFE DIFFICULT.
+  // static defaultProps = {
+  //   center: {
+  //     lat: 28.5383355,
+  //     lng: -81.37923649999999
+  //   },
+  //   zoom: 11
+  // };
 
   // static getDerivedStateFromProps = (props, state) => {
   //   this.setState({
@@ -57,13 +66,14 @@ class SimpleMap extends Component {
   // }
 
   checkGeolocation = () => {
+    // console.log('Geolocation called');
     if (!navigator.geolocation) {
       console.log('Geolocation unsupported!')
       return
     }
 
     navigator.geolocation.getCurrentPosition((position) => {
-      console.log('Show position called');
+      console.log('Geolocation supported. Show position called');
       if (!position.coords) {
         console.log('Coords not found')
         return
@@ -84,23 +94,11 @@ class SimpleMap extends Component {
     this.checkGeolocation()
   }
 
-  // componentDidUpdate(){
 
-  //   this.setState({
-  //     center: this.props.center,
-  //     latitude: this.props.latitude,
-  //     longitude: this.props.longitude,
-  //     categories: this.props.categories,
-  //     Restaurants: this.props.Restaurants,
-  //   })
-
-  //   //An update loop
-
-  // }
 
   handleRestaurantClick = (restaurant, event) => {
-   
-    const [address1 = '', address2 = '', address3 = ''] = restaurant.address 
+
+    const [address1 = '', address2 = '', address3 = ''] = restaurant.address
 
     const card = {
       id: restaurant._id,
@@ -121,124 +119,93 @@ class SimpleMap extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-   this.setState({
-     ...nextProps
-   })
+    this.setState({
+      ...nextProps
+    })
   }
 
 
   render() {
-    // console.log('The Simple Map Render was called again');
-    // console.log(this.props.Restaurants);
-    // for some reason these two things are not the same even though the parent has made a change to props and thusly re-rendered the component, and the state is still set to the old array
-    // console.log(this.state.Restaurants);
-    // console.log(this.state)
-    const {classes} = this.props;
-   
+
+    const { classes } = this.props;
+
+    // debugger;
+    const {center, zoom} = this.state
+
+
     return (
       // Important! Always set the container height explicitly
       //API Key is bootstrapURLKeys
+
       <div style={{ height: '100vh', width: '100%' }}>
-        {
-          this.state.coords && this.state.center ?
 
-            <GoogleMapReact
-              bootstrapURLKeys={{ key: 'AIzaSyA46ttkQXjotLXDI1xpNOCkUz5GCRRrQTI' }}
-              defaultCenter={{
-                lat: 28.5383355,
-                lng: -81.37923649999999
-              }}
-              center={this.state.center}
-              defaultZoom={this.props.zoom}
-            >
+        
+    <GoogleMapReact
+          bootstrapURLKeys={mapCredentials}
+          defaultCenter={center}
+          center={center}
+          defaultZoom={zoom}
+        >
 
-              {this.state.Restaurants.map(restaurant => {
+          {console.log('The A Component was rendered')}
+          {this.state.Restaurants.map(restaurant => {
 
-              console.log('A restaurant being logged', restaurant.deals);
-                if (restaurant.deals == undefined || restaurant.deals.length < 1) {
-                  console.log('This restaurant is empty', restaurant.deals);
-                  
-                  return <AnyReactComponentGrey
-                  restaurant={restaurant}
-                  key={restaurant._id}
-                  lat={restaurant.coordinates.latitude}
-                  lng={restaurant.coordinates.longitude}
-                  onClick={this.handleRestaurantClick.bind(this, restaurant)}
-                  className = {classes.index}
-                  style={{zIndex:'1'}}
+            console.log('A restaurant being logged', restaurant.deals);
+            if (restaurant.deals == undefined || restaurant.deals.length < 1) {
+              console.log('This restaurant is empty', restaurant.deals);
 
-                  
-                />
-                }
-
-                // console.log('restaurant', restaurant)
-                return  <AnyReactComponent
+              return <AnyReactComponentGrey
                 restaurant={restaurant}
                 key={restaurant._id}
                 lat={restaurant.coordinates.latitude}
                 lng={restaurant.coordinates.longitude}
                 onClick={this.handleRestaurantClick.bind(this, restaurant)}
-                style={{zIndex:'10'}}
+                className={classes.index}
+                style={{ zIndex: '1' }}
+
 
               />
+            }
 
-              })}
+            // console.log('restaurant', restaurant)
+            return <AnyReactComponent
+              restaurant={restaurant}
+              key={restaurant._id}
+              lat={restaurant.coordinates.latitude}
+              lng={restaurant.coordinates.longitude}
+              onClick={this.handleRestaurantClick.bind(this, restaurant)}
+              style={{ zIndex: '10' }}
 
+            />
 
-            </GoogleMapReact>
+          })}
 
-            :
+          </GoogleMapReact>
 
-            // <div>Nothing</div>
-            <GoogleMapReact
-              bootstrapURLKeys={{ key: 'AIzaSyA46ttkQXjotLXDI1xpNOCkUz5GCRRrQTI' }}
-              defaultCenter={{
-                lat: 28.5383355,
-                lng: -81.37923649999999
-              }}
-              defaultZoom={11}
-            >
-              {this.state.Restaurants.map(restaurant => (
-                <AnyReactComponent
-                  id={restaurant._id}
-                  key={restaurant._id}
-                  lat={restaurant.coordinates.latitude}
-                  lng={restaurant.coordinates.longitude}
-                  address={restaurant.address[0]}
-                  text={'This is some text'}
-                  onClick={this.handleRestaurantClick}
-
-                />
-
-              ))}
-
-            </GoogleMapReact>
-
-
-        }
+      
       </div>
-    );
-  }
-}
+          );
+        }
+      }
 SimpleMap.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles, { withTheme: true })(SimpleMap);
-// export default withRouter(SimpleMap);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            classes: PropTypes.object.isRequired,
+          theme: PropTypes.object.isRequired,
+        };
+        
+export default withStyles(styles, {withTheme: true })(SimpleMap);
+          // export default withRouter(SimpleMap);
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          

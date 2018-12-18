@@ -95,8 +95,7 @@ class FullWidthTabs extends React.Component {
   }
 
   getStyle = (myValue) => {
-    // return isActive ? this.props.classes.selected : this.props.classes.notselected
-    // console.log('THIS IS ACTIVE', isActive,this.props.foodCat,this, event.target)
+
     console.log('LOOK HERE',myValue, this.state.value, this.props.classes)
 
     if (myValue == this.state.value){
@@ -110,41 +109,48 @@ class FullWidthTabs extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
-    // const { classes } = this.props;
+
+    if (this.props.stepperFdValue == 'All'){
+      return (
+        <div className={classes.root}>
+          <AppBar position="fixed" color="default" className={classes.appBar}>
+            <Tabs
+              value={this.props.stepperValue}
+              onChange={this.callTimeValue}
+              indicatorColor="primary"
+              textColor="primary"
+              fullWidth
+              scrollable
+            >
+              <Tab value='Days' label={this.props.currentDay} className = {this.getStyle('Days')} disabled/>
+              <Tab value='Time' label={this.props.currentTimePresent} className={classes.wrapper} className={classes.labelContainer} className={classes.fullWidth} className = {this.getStyle('Time')} disabled/>
+            </Tabs>
+          </AppBar>
+        </div>
+      );
+    }
+    else{
+      return (
+        <div className={classes.root}>
+          <AppBar position="fixed" color="default" className={classes.appBar}>
+            <Tabs
+              value={this.props.stepperValue}
+              onChange={this.callTimeValue}
+              indicatorColor="primary"
+              textColor="primary"
+              fullWidth
+              scrollable
+            >
+              <Tab value='Days' label={this.props.currentDay} className = {this.getStyle('Days')} />
+              <Tab value='Time' label={this.props.currentTimePresent} className={classes.wrapper} className={classes.labelContainer} className={classes.fullWidth} className = {this.getStyle('Time')}/>
+            </Tabs>
+          </AppBar>
+        </div>
+      );
+    }
 
 
-    return (
-      <div className={classes.root}>
-        <AppBar position="fixed" color="default" className={classes.appBar}>
-          <Tabs
-            // value={this.props.stepperValue}\
-            value={this.props.stepperValue}
-            onChange={this.callTimeValue}
-            indicatorColor="primary"
-            textColor="primary"
-            fullWidth
-            scrollable
-          >
-            {/* what is the value that this is gonna send? The value will be the command to set the relevant modals to open. */}
-            <Tab value='Days' label={this.props.currentDay} className = {this.getStyle('Days')} />
-            <Tab value='Time' label={this.props.currentTimePresent} className={classes.wrapper} className={classes.labelContainer} className={classes.fullWidth} className = {this.getStyle('Time')}/>
-            {/* <Tab value = 'Now' label="Now" />
-            <Tab value = 'Custom' label="Custom" /> */}
-          </Tabs>
-        </AppBar>
-        {/* {value === 'Now' && <TabContainer>Now</TabContainer>}
-        {value === 'Custom' && <TabContainer>Custom</TabContainer>} */}
-        {/* <SwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={this.state.value}
-          onChangeIndex={this.handleChangeIndex}
-        >
-          <TabContainer dir={theme.direction}>Item One</TabContainer>
-          <TabContainer dir={theme.direction}>Item Two</TabContainer>
-          <TabContainer dir={theme.direction}>Item Three</TabContainer>
-        </SwipeableViews> */}
-      </div>
-    );
+   
   }
 }
 

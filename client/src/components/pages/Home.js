@@ -15,6 +15,8 @@ import MyDayModal from '../Dialog/MyDayModal';
 import MyTimeModal from '../Dialog/MyTimeModal';
 import MySnackbar from '../Snackbar/MySnackbar';
 import LoginModal from '../Dialog/LoginModal';
+import Button from '../Button';
+
 import Snackbar from '@material-ui/core/Snackbar';
 import InfoIcon from '@material-ui/icons/Info';
 import moment from 'moment';
@@ -30,7 +32,7 @@ import moment from 'moment';
 class Home extends Component {
   state = {
     value: 'one',
-    stepperFdValue: 'All',
+    stepperFdValue: 'hasFood',
     stepperValue: 'All',
     loggingIn: false,
     loggedIn: false,
@@ -42,7 +44,7 @@ class Home extends Component {
     vertical: 'top',
     horizontal: 'left',
     foodCat: 'All',
-    hasFood: false,
+    hasFood: true,
     hasDrink: false,
     stepperValue: 0,
     Restaurants: null,
@@ -64,6 +66,8 @@ class Home extends Component {
     dayModalOpen: false,
     timeModalOpen: false
   };
+
+  clockInterval = null;
 
   getRestaurants = () => {
 
@@ -398,8 +402,7 @@ class Home extends Component {
     }
 
 
-
-
+    clearInterval(this.clockInterval)
 
     console.log('This is changed time', time);
     this.setState({
@@ -409,11 +412,16 @@ class Home extends Component {
   }
 
   handleResetTime = () => {
-    this.setState({
-      currentTime: new moment().format('Hmm'),
-      currentTimePresent: new moment().format('h:mm a'),
 
-    })
+    this.updateClock()
+
+    this.setClockInterval()
+
+    // this.setState({
+    //   currentTime: new moment().format('Hmm'),
+    //   currentTimePresent: new moment().format('h:mm a'),
+
+    // })
   }
 
 
@@ -606,6 +614,20 @@ class Home extends Component {
       });
   }
 
+  updateClock = () => {
+    // console.log('THIS IS ME',this.state.currentTime)
+    this.setState({
+      currentTime: new moment().format('Hmm'),
+      currentTimePresent: new moment().format('h:mm a'),
+      currentDay: new moment().format('dddd')
+    })
+  }
+
+  setClockInterval = () => {
+    clearInterval(this.clockInterval)
+    this.clockInterval = setInterval(this.updateClock, 1000 * 60)
+  }
+
   componentDidMount = () => {
     console.log('Component indeed mounted');
     console.log(this);
@@ -620,20 +642,24 @@ class Home extends Component {
 
     // debugger
 
-    setInterval(
+    //I just wan't to be able to stop this when I use the other component, and I've seen some example sin React but I'm not quite sure.
+    // if (intervalId !== null )
 
-      () => {
-        // console.log('THIS IS ME',this.state.currentTime)
-        this.setState({
-          currentTime: new moment().format('Hmm'),
-          currentTimePresent: new moment().format('h:mm a'),
-          currentDay: new moment().format('dddd')
+    this.setClockInterval()
+    // setInterval(
 
-        })
+    //   () => {
+    //     // console.log('THIS IS ME',this.state.currentTime)
+    //     this.setState({
+    //       currentTime: new moment().format('Hmm'),
+    //       currentTimePresent: new moment().format('h:mm a'),
+    //       currentDay: new moment().format('dddd')
 
-      },
-      1000 * 60
-    );
+    //     })
+
+    //   },
+    //   1000 * 60
+    // );
 
     // console.log(this.state.currentTime)
 
@@ -642,6 +668,11 @@ class Home extends Component {
     //some kind of get deals
 
     //some kind of get deals
+
+  }
+
+  componentWillUnmount = () => {
+    console.log('COMPONENT UNMOUNTED')
 
   }
 
@@ -781,10 +812,38 @@ class Home extends Component {
     })
   }
 
-  setStepperFdValue = (valued) => {
+  setStepperFdValue = (value) => {
     this.setState({
-      stepperFdValue: valued
+      stepperFdValue: value
     })
+
+    if (value == 'All') {
+      this.setState({
+        hasFood: false,
+        hasDrink: false,
+      })
+    }
+
+    if (value == 'hasBoth') {
+      this.setState({
+        hasFood: true,
+        hasDrink: true,
+      })
+    }
+
+    if (value == 'hasDrink') {
+      this.setState({
+        hasFood: false,
+        hasDrink: true,
+      })
+    }
+
+    if (value == 'hasFood') {
+      this.setState({
+        hasFood: true,
+        hasDrink: false,
+      })
+    }
   }
 
   setStepperValue = (valued) => {
@@ -792,6 +851,8 @@ class Home extends Component {
       stepperValue: valued
     })
   }
+
+
 
 
   render() {
@@ -952,6 +1013,11 @@ class Home extends Component {
           sendDemoValue={this.sendDemoValue}
         /> */}
 
+        <Button
+        stepperFdValue = {this.state.stepperFdValue}
+        setStepperFdValue = {this.setStepperFdValue}
+        />
+
         <Tabs 
           foodCat={this.state.foodCat}
           onChange={this.handleTabChange}
@@ -976,6 +1042,8 @@ class Home extends Component {
           sendTimeValue={this.sendTimeValue}
           stepperValue = {this.state.stepperValue}
           setStepperValue = {this.setStepperValue}
+          stepperFdValue = {this.state.stepperFdValue}
+
 
           />
 

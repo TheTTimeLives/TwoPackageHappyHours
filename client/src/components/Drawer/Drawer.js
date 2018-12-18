@@ -7,29 +7,11 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Icon from '@material-ui/core/Icon';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Divider from '@material-ui/core/Divider';
-import { mailFolderListItems, otherMailFolderListItems } from './tileData';
-import MenuIcon from '@material-ui/icons/Menu';
 import MediaCard from '../Card/MediaCard';
 import Avatar from '@material-ui/core/Avatar';
-import ImageIcon from '@material-ui/icons/Image';
-import InboxIcon from '@material-ui/icons/Inbox';
-// import IntegrationReactSelect from '../ReactSelect/IntegrationReactSelect';
-import TextField from '@material-ui/core/TextField';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Input from '@material-ui/core/Input';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import FilledInput from '@material-ui/core/FilledInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import LocalBarIcon from '@material-ui/icons/LocalBar';
+import LocalDiningIcon from '@material-ui/icons/LocalDining';
+import LocalActivityIcon from '@material-ui/icons/LocalActivity';
 import moment from 'moment';
 
 
@@ -291,12 +273,85 @@ class TemporaryDrawer extends React.Component {
 
 
           if (deals.isGood > 1) {
+            if(deals.happyFood && !deals.happyDrink){
+              return (
+                <div>
+                  <List>
+                    <ListItem>
+                      <Avatar>
+                        <LocalBarIcon />
+                      </Avatar>
+                      <ListItemText classes={isGood} primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
+                    </ListItem>
+                  </List>
+                  <List style={isNormal}>
+                    <ListItem >
+                      {/* <ListItemIcon>
+                        <InboxIcon />
+                      </ListItemIcon> */}
+                      <ListItemText disableTypography className = {classes.bodys} style={isGood} primary={deals.summary} />
+                    </ListItem>
+                    <ListItem>
+                    <div style={{
+                      display: 'flex',
+                      position: 'relative',
+                      left: 100
+                    }}>
+                    <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                      <div style = {{padding : 8}}> {deals.isGood} </div>
+                      <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+  
+                      <div style = {{padding : 8}}> {deals.isBad} </div>
+                    </div>
+                  </ListItem>
+                  </List>
+                </div>
+              )
+  
+
+            }
+            if (!deals.happyFood && deals.happyDrink){
+              return (
+                <div>
+                  <List>
+                    <ListItem>
+                      <Avatar>
+                        <LocalDiningIcon />
+                      </Avatar>
+                      <ListItemText classes={isGood} primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
+                    </ListItem>
+                  </List>
+                  <List style={isNormal}>
+                    <ListItem >
+                      {/* <ListItemIcon>
+                        <InboxIcon />
+                      </ListItemIcon> */}
+                      <ListItemText disableTypography className = {classes.bodys} style={isGood} primary={deals.summary} />
+                    </ListItem>
+                    <ListItem>
+                    <div style={{
+                      display: 'flex',
+                      position: 'relative',
+                      left: 100
+                    }}>
+                    <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                      <div style = {{padding : 8}}> {deals.isGood} </div>
+                      <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+  
+                      <div style = {{padding : 8}}> {deals.isBad} </div>
+                    </div>
+                  </ListItem>
+                  </List>
+                </div>
+              )
+
+            }
             return (
               <div>
                 <List>
                   <ListItem>
                     <Avatar>
-                      <ImageIcon />
+                      <LocalActivityIcon />
                     </Avatar>
                     <ListItemText classes={isGood} primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
                   </ListItem>
@@ -324,17 +379,86 @@ class TemporaryDrawer extends React.Component {
                 </List>
               </div>
             )
-
-
           }
 
           if (deals.isBad > 1) {
+            if (deals.happyFood && !deals.happyDrink){
+              return (
+                <div>
+                  <List>
+                    <ListItem>
+                      <Avatar>
+                        <LocalDiningIcon />
+                      </Avatar>
+                      <ListItemText primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
+                    </ListItem>
+                  </List>
+                  <List style={isNormal}>
+                    <ListItem  >
+                      {/* <ListItemIcon>
+                        <InboxIcon />
+                      </ListItemIcon> */}
+                      <ListItemText disableTypography className = {classes.bodys} style={isBad} primary={deals.summary} />
+                    </ListItem>
+                    <ListItem>
+                    <div style={{
+                      display: 'flex',
+                      position: 'relative',
+                      left: 100
+                    }}>
+                    <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                      <div style = {{padding : 8}}> {deals.isGood} </div>
+                      <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+  
+                      <div style = {{padding : 8}}> {deals.isBad} </div>
+                    </div>
+                  </ListItem>
+                  </List>
+                </div>
+              )
+
+            }
+            if (!deals.happyFood && deals.happyDrink) {
+              return (
+                <div>
+                  <List>
+                    <ListItem>
+                      <Avatar>
+                        <LocalBarIcon />
+                      </Avatar>
+                      <ListItemText primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
+                    </ListItem>
+                  </List>
+                  <List style={isNormal}>
+                    <ListItem  >
+                      {/* <ListItemIcon>
+                        <InboxIcon />
+                      </ListItemIcon> */}
+                      <ListItemText disableTypography className = {classes.bodys} style={isBad} primary={deals.summary} />
+                    </ListItem>
+                    <ListItem>
+                    <div style={{
+                      display: 'flex',
+                      position: 'relative',
+                      left: 100
+                    }}>
+                    <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                      <div style = {{padding : 8}}> {deals.isGood} </div>
+                      <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+  
+                      <div style = {{padding : 8}}> {deals.isBad} </div>
+                    </div>
+                  </ListItem>
+                  </List>
+                </div>
+              )
+            }
             return (
               <div>
                 <List>
                   <ListItem>
                     <Avatar>
-                      <ImageIcon />
+                      <LocalActivityIcon />
                     </Avatar>
                     <ListItemText primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
                   </ListItem>
@@ -362,17 +486,87 @@ class TemporaryDrawer extends React.Component {
                 </List>
               </div>
             )
-
-
           }
 
+          if (deals.happyFood && !deals.happyDrink){
+            return (
+              <div>
+                <List>
+                  <ListItem>
+                    <Avatar>
+                      <LocalDiningIcon />
+                    </Avatar>
+                    <ListItemText primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
+                  </ListItem>
+                </List>
+                <List style={isNormal}>
+                  <ListItem n>
+                    {/* <ListItemIcon>
+                      <InboxIcon />
+                    </ListItemIcon> */}
+                    {/* I'M GOING INSANE */}
+                    <ListItemText disableTypography className = {classes.bodys} style={isNormal} primary={deals.summary} />
+                  </ListItem>
+                  <ListItem disableTypography style = {{paddingTop: 0, paddingBottom: 0}}>
+                    <div style={{
+                      display: 'flex',
+                      position: 'relative',
+                      left: 100
+                    }}>
+                    <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                      <div style = {{padding : 8}}> {deals.isGood} </div>
+                      <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+  
+                      <div style = {{padding : 8}}> {deals.isBad} </div>
+                    </div>
+                  </ListItem>
+                </List>
+              </div>
+            )
 
+          }
+          if (!deals.happyFood && deals.happyDrink){
+            return (
+              <div>
+                <List>
+                  <ListItem>
+                    <Avatar>
+                      <LocalBarIcon />
+                    </Avatar>
+                    <ListItemText primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
+                  </ListItem>
+                </List>
+                <List style={isNormal}>
+                  <ListItem n>
+                    {/* <ListItemIcon>
+                      <InboxIcon />
+                    </ListItemIcon> */}
+                    {/* I'M GOING INSANE */}
+                    <ListItemText disableTypography className = {classes.bodys} style={isNormal} primary={deals.summary} />
+                  </ListItem>
+                  <ListItem disableTypography style = {{paddingTop: 0, paddingBottom: 0}}>
+                    <div style={{
+                      display: 'flex',
+                      position: 'relative',
+                      left: 100
+                    }}>
+                    <Icon className = {classes.up} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isGood} onClick={this.sendUp}>thumb_up</Icon>
+                      <div style = {{padding : 8}}> {deals.isGood} </div>
+                      <Icon className = {classes.down} data-name={deals.restaurantAlias} data-Id={deals._id} data-busId={deals.businessId} data-vote={deals.isBad} onClick={this.sendDown}>thumb_down</Icon>
+  
+                      <div style = {{padding : 8}}> {deals.isBad} </div>
+                    </div>
+                  </ListItem>
+                </List>
+              </div>
+            )
+          }
           return (
             <div>
               <List>
                 <ListItem>
                   <Avatar>
-                    <ImageIcon />
+                    <LocalActivityIcon />
                   </Avatar>
                   <ListItemText primary={deals.timeDay} secondary={`${startTimePassed} - ${endTimePassed} `} />
                 </ListItem>
@@ -401,6 +595,9 @@ class TemporaryDrawer extends React.Component {
               </List>
             </div>
           )
+
+
+          
 
 
         })}

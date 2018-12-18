@@ -67,7 +67,7 @@ notselected: {
 
 class FullWidthTabs extends React.Component {
   state = {
-    value: 'All'
+    value: 'hasFood'
   }
     // handleChange = (event, value) => {
     //   this.setState({ value });
@@ -112,29 +112,63 @@ class FullWidthTabs extends React.Component {
     const { classes } = this.props;
     const { value } = this.state;
 
-    return (
-      <div className={classes.root}>
-        <AppBar position="fixed" color="default" className = {classes.appBar}>
-          <Tabs
-            value={this.props.stepperFdValue}
-            onChange={this.callDealBoolean}
-            indicatorColor="primary"
-            textColor="primary"
-            scrollable
-            scrollButtons="on"
-            fullWidth
-           
-          >
-            <Tab className = {this.getStyle('All')} value='All' label="All" />
-            <Tab className = {this.getStyle('hasFood')} value='hasFood' label="Food"  />
-            <Tab className = {this.getStyle('hasBoth')} value='hasBoth' label="Both" />
-            <Tab className = {this.getStyle('hasDrink')} value='hasDrink' label="Drinks" />
+    if (this.props.stepperFdValue == "All"){
+      return (
+        <div className={classes.root}>
+          <AppBar position="fixed" color="default" className = {classes.appBar}>
+            <Tabs
+              value={this.props.stepperFdValue}
+              onChange={this.callDealBoolean}
+              indicatorColor="primary"
+              textColor="primary"
+              // scrollable
+              // scrollButtons="on"
+              fullWidth
+             
+            >
+              {/* <Tab className = {this.getStyle('All')} value='All' label="All" /> */}
+              <Tab  value='hasFood' label="Food" className = {this.getStyle('hasFood')} disabled/>
+              <Tab  value='hasBoth' label="Both" className = {this.getStyle('hasBoth')} disabled/>
+              <Tab  value='hasDrink' label="Drinks" className = {this.getStyle('hasDrink')} disabled/>
+              {/* <Tab value='hasFood' label='hasFood'  disabled/>
+              <Tab value='hasDrink' label='hasDrink'   disabled/> */}
+  
+            </Tabs>
+          </AppBar>
+  
+        </div>
+      );
+    }
+    else{
+      return (
+        <div className={classes.root}>
+          <AppBar position="fixed" color="default" className = {classes.appBar}>
+            <Tabs
+              value={this.props.stepperFdValue}
+              onChange={this.callDealBoolean}
+              indicatorColor="primary"
+              textColor="primary"
+              // scrollable
+              // scrollButtons="on"
+              fullWidth
+             
+            >
+              {/* <Tab className = {this.getStyle('All')} value='All' label="All" /> */}
+              <Tab  value='hasFood' label="Food" className = {this.getStyle('hasFood')}/>
+              <Tab  value='hasBoth' label="Both" className = {this.getStyle('hasBoth')}/>
+              <Tab  value='hasDrink' label="Drinks" className = {this.getStyle('hasDrink')}/>
+              {/* <Tab value='hasFood' label='hasFood' disabled/>
+              <Tab value='hasDrink' label='hasDrink'   disabled/> */}
+  
+            </Tabs>
+          </AppBar>
+  
+        </div>
+      );
 
-          </Tabs>
-        </AppBar>
+    }
 
-      </div>
-    );
+    
   }
 }
 
