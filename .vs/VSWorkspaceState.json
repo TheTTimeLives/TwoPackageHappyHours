@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\src",
+    "\\client\\src\\components",
+    "\\client\\src\\components\\Appbar",
+    "\\client\\src\\components\\Card",
+    "\\client\\src\\components\\currentLocation",
+    "\\client\\src\\components\\Dialog",
+    "\\client\\src\\components\\Drawer",
+    "\\client\\src\\components\\FoodDrinkStepper"
+  ],
+  "SelectedNode": "\\client\\src\\components\\Appbar\\Appbar.js",
+  "PreviewInSolutionExplorer": false
+}

@@ -2,26 +2,18 @@ import React, { Component } from "react";
 import SimpleMap from "./SimpleMap";
 import Stepper from "../Stepper/Stepper";
 import Tabs from "../Tabs/Tabs";
-import DemoTabs from "../Tabs/DemoTabs";
-
 import Appbar from "../Appbar/Appbar";
 import Stepperfd from "../FoodDrinkStepper/fdStepper";
-//import Restaurants from "./RestaurantList.json";
 import axios from "axios";
-import Clock from 'react-live-clock';
-import MyDialog from '../Dialog/MyDialog';
-import MyDialogConfirm from '../Dialog/MyDialogConfirm';
-import MyDayModal from '../Dialog/MyDayModal';
-import MyTimeModal from '../Dialog/MyTimeModal';
+import MyDialog from './MyDialog';
+import MyDialogConfirm from './MyDialogConfirm';
+import MyDayModal from "./MyDayModal";
+import MyTimeModal from './MyTimeModal';
 import MySnackbar from '../Snackbar/MySnackbar';
-import LoginModal from '../Dialog/LoginModal';
-import Button from '../Button';
-
-import Snackbar from '@material-ui/core/Snackbar';
-import InfoIcon from '@material-ui/icons/Info';
-import moment from 'moment';
-
-
+import LoginModal from "./LoginModal";
+import Button from "../Button";
+import InfoIcon from "@material-ui/icons/Info";
+import moment from "moment";
 
 //this is pretty straight forward, we have components and they go ito our shit and obviously there pretty reusuable
 //we can also use props to pass stuff later. We can set these props relative to things and do stuff to em. It's basically like being able to set arrays and like JSON to attributes it's very powerful.
